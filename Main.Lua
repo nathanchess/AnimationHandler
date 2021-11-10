@@ -1,11 +1,11 @@
 -- [[ Variables ]] -- 
-local AnimationFolder = game.ReplicatedStorage.Assets.Animations -- Change location to where you store your animations. (Suggested: Folder in ReplicatedStorage)
+local AnimationFolder = game.ReplicatedStorage.Assets.Animations
 
 local AnimationStorage = {}
 
 -- [[ Services ]] -- 
 local RunService = game:GetService("RunService")
-local MaidClass = require(game.ReplicatedStorage.Modules.Utils.MaidClass) -- MaidClass module is in another lua file within this repository.
+local MaidClass = require(game.ReplicatedStorage.Modules.Utils.MaidClass)
 
 -- [[ Module ]] -- 
 local AnimationHandler = {}
@@ -46,7 +46,7 @@ function AnimationHandler.new(Humanoid)
 	
 	NewClass.Maid["HumanoidCheck"] = Humanoid.Died:Connect(function()
 		NewClass.Maid:DoCleaning()
-		
+		AnimationStorage[Humanoid] = nil
 	end)
 	
 	return NewClass
