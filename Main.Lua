@@ -1,11 +1,11 @@
 -- [[ Variables ]] -- 
-local AnimationFolder = game.ReplicatedStorage.Assets.Animations
+local AnimationFolder = game.ReplicatedStorage.Assets.Animations -- Change to where your animations are stored.
 
 local AnimationStorage = {}
 
 -- [[ Services ]] -- 
 local RunService = game:GetService("RunService")
-local MaidClass = require(game.ReplicatedStorage.Modules.Utils.MaidClass)
+local MaidClass = require(game.ReplicatedStorage.Modules.Utils.MaidClass) -- Change to require maid class module location
 
 -- [[ Module ]] -- 
 local AnimationHandler = {}
